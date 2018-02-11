@@ -4,6 +4,10 @@
         <title>Rock Paper Scissors</title>
     </head>
     <body>
+        
+        
+        <h1 id="demo"></h1>
+        
         <script>
         //randomly calculated computer's choice
         function computerPlay(){
@@ -24,7 +28,7 @@
         }
         //playing one round of the game
         function playRound(playerSelection, computerSelection){
-            playerSelection = playerSelection.toLowerCase();
+           // playerSelection = playerSelection.toLowerCase();
             if(playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper"){
                 console.log("You won! " +playerSelection+" beats "+computerSelection+"!");
                 return 0;
@@ -40,21 +44,18 @@
             let round = 0;
             let playerScore = 0;
             let computerScore = 0;
-            let playerchoice = prompt("Enter Rock, Paper or Scissors.");
-           
+            let playerSelection = prompt("Enter Rock, Paper or Scissors.");
+                playerSelection = playerSelection.toLowerCase();
+            let computerSelection = computerPlay()
                 
-                playRound(playerchoice, computerPlay());
-                
-                if(playRound() == 0){
-                    playerScore++;
-                }else{
-                    computerScore++;
-                }
+                playRound(playerSelection, computerSelection);
                 
             
-            console.log();
-            console.log(playerScore);
-            console.log(computerScore);
+                
+            console.log("Your selection: "+playerSelection);
+            console.log("Computer selection: "+computerSelection);
+            console.log("Player score: "+playerScore);
+            console.log("Computer score: "+computerScore);
         }
         </script>
     </body>

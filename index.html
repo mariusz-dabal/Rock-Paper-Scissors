@@ -6,7 +6,8 @@
     <body>
         
         
-        <h1 id="demo"></h1>
+        <h1 id="winner"></h1>
+        <p id="score"></p>
         
         <script>
         //randomly calculated computer's choice
@@ -30,33 +31,60 @@
         function playRound(playerSelection, computerSelection){
            // playerSelection = playerSelection.toLowerCase();
             if(playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper"){
-                console.log("You won! " +playerSelection+" beats "+computerSelection+"!");
+                alert("You won! " +playerSelection+" beats "+computerSelection+"!");
                 return 0;
             }else if(playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock") {
-                console.log("You lose! "+computerSelection+" beats "+playerSelection+"!");
+                alert("You lose! "+computerSelection+" beats "+playerSelection+"!");
                 return 1;
             }else{
-                return "What?";
+                alert("It's a tie!");
+                return 2;
             }
         }
         //playing full 5 rounds with score
         function game(){
             let round = 0;
+            let score = 0;
             let playerScore = 0;
             let computerScore = 0;
+            let finalScore;
+            while(round < 5){
             let playerSelection = prompt("Enter Rock, Paper or Scissors.");
                 playerSelection = playerSelection.toLowerCase();
-            let computerSelection = computerPlay()
-                
-                playRound(playerSelection, computerSelection);
-                
+            let computerSelection = computerPlay();
+            score = playRound(playerSelection, computerSelection);
+    
+            switch(score){
+                case 0:
+                    playerScore++;
+                    break;
+                case 1:
+                    computerScore++;
+                    break;
+                case 2:
+                    console.log("No points! Tie!");
+            }
             
-                
             console.log("Your selection: "+playerSelection);
             console.log("Computer selection: "+computerSelection);
             console.log("Player score: "+playerScore);
             console.log("Computer score: "+computerScore);
+    
+            round++;
+            }
+            document.getElementById("score").innerHTML = "Your score: "+playerScore+" Computer score: "+computerScore;
+            if(playerScore > computerScore){
+                finalScore = "You win!";
+            } else if(playerScore < computerScore){
+                finalScore = "Computer wins!";
+            } else {
+                finalScore = "It's a Tie!"
+            }
+           
+            document.getElementById("winner").innerHTML = finalScore;
+           
         }
+        game();
         </script>
     </body>
 </html>

@@ -1,0 +1,135 @@
+/* Rock paper scissors stylesheet */
+
+body {
+  margin: 0;
+}
+#wrapper {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  background-color: #0A100D;
+}
+
+#left {
+  float: left;
+}
+
+#right {
+  float: right;
+}
+
+.score {
+width: 20%;
+color: white;
+text-align: center;
+line-height: 580px;
+font-size: 13em;
+font-family: 'Press Start 2P', cursive;
+}
+
+h1 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 4.2em;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 10px;
+}
+
+h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 2em;
+  margin-top: 0;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+header {
+  width: 60%;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  background-color: #902923;
+  padding-top: 10px;
+}
+
+.content {
+  margin: 0 auto;
+  width: 60%;
+  float:left;
+}
+
+.box {
+  width: 33.33%;
+  height: 200px;
+  float: left;
+  margin: 0 auto;
+  background-color: #A22C29;
+  text-align: center;
+  line-height: 150px;
+}
+
+img {
+  max-width: 60%;
+  height: auto;
+}
+
+#scoreBoard {
+  clear: both;
+  width: 100%;
+  height: 200px;
+  margin: 0 auto;
+  background-color: #902923;
+  font-size: 3.5em;
+  text-align: center;
+  line-height: 200px;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+}
+
+button {
+  width: 33%;
+  height: 239px;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #B9BAA3;
+  border: solid #0A100D 10px;
+}
+
+i {
+  font-size: 11em;
+}
+
+footer {
+  width: 60%;
+  height: 100px;
+  margin-top: 0px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #902923;
+  text-align: center;
+  line-height: 100px;
+  clear: both;
+}
+
+span {
+  font-size: 8em;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  text-align: center;
+  line-height: 200px;
+}
+
+.container {
+width: 100%;
+height: 239px;
+}
+
+#rock {
+  float: left;
+}
+
+#scissors {
+  float: right;
+}
